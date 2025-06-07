@@ -1,17 +1,27 @@
+/* Global Reset & Base Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    background: #f4f4f4;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #e0eafc, #cfdef3);
     display: flex;
     justify-content: center;
-    padding-top: 40px;
+    align-items: flex-start;
+    padding: 40px 20px;
+    min-height: 100vh;
 }
 
 .container {
-    width: 350px;
-    background: #fff;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    background: white;
+    padding: 30px 25px;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
 }
 
 h1,
@@ -19,87 +29,120 @@ h2,
 h3,
 h4 {
     text-align: center;
+    margin-bottom: 10px;
+    color: #333;
 }
 
+#balance {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #222;
+}
+
+/* Income/Expense Summary */
 .inc-exp-container {
     display: flex;
     justify-content: space-between;
     margin: 20px 0;
+    padding: 15px;
+    background: #f0f0f0;
+    border-radius: 10px;
+}
+
+.inc-exp-container div {
+    text-align: center;
+    flex: 1;
 }
 
 .money {
-    font-size: 1.2em;
+    font-size: 1.2rem;
+    margin-top: 5px;
+    font-weight: bold;
 }
 
 .plus {
-    color: green;
+    color: #2ecc71;
 }
 
 .minus {
-    color: red;
+    color: #e74c3c;
 }
 
+/* History */
 .list {
     list-style: none;
-    padding: 0;
-    margin: 20px 0;
+    margin-top: 20px;
+    margin-bottom: 30px;
 }
 
 .list li {
-    background: #f9f9f9;
-    padding: 10px;
+    background: #fff;
+    padding: 12px 16px;
     border-left: 5px solid;
-    margin-bottom: 10px;
+    border-radius: 8px;
+    margin-bottom: 12px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
 
 .list li.plus {
-    border-color: green;
+    border-color: #2ecc71;
 }
 
 .list li.minus {
-    border-color: red;
+    border-color: #e74c3c;
 }
 
-button {
-    width: 100%;
-    padding: 10px;
-    background: #333;
-    color: white;
-    border: none;
-    margin-top: 10px;
-    cursor: pointer;
-}
-.list li {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #f9f9f9;
-  padding: 10px 15px;
-  margin-bottom: 10px;
-  border-left: 5px solid;
-  border-radius: 4px;
-}
 .transaction-text {
-  display: flex;
-  flex-direction: column;
-  font-size: 1.3rem;
-  margin-right: 15px;
+    font-size: 1rem;
+    max-width: 240px;
+    color: #555;
 }
 
-
+/* Button Styles */
 .delete-btn {
-  background-color: crimson;
-  border: none;
-  color: white;
-  padding: 6px 12px;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 16 px;
-  transition: background 0.3s ease;
+    background: #e74c3c;
+    border: none;
+    color: white;
+    padding: 6px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background 0.2s ease;
 }
 
 .delete-btn:hover {
-  background-color: darkred;
+    background: #c0392b;
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form input[type="text"],
+form input[type="number"] {
+    padding: 10px;
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+form button {
+    padding: 12px;
+    background: #2980b9;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+form button:hover {
+    background: #21618c;
 }
